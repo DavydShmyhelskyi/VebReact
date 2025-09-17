@@ -24,11 +24,6 @@ function App() {
     avatarUrl: "https://www.oa.edu.ua/assets/images/n/2012/big/grushevsky_b.jpg",
   },
   {
-    name: "Богдан Хмельницький",
-    role: "Гетьман Війська Запорозького",
-    avatarUrl: "https://www.museumsun.org/media/person_images/22_etsy_com_bogdan_hmel_1-kopyya-768x500.jpg",
-  },
-  {
     name: "Григорій Сковорода",
     role: "Філософ, просвітитель",
     avatarUrl: "https://upload.wikimedia.org/wikipedia/commons/5/50/%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D0%B9_%D0%A1%D0%BA%D0%BE%D0%B2%D0%BE%D1%80%D0%BE%D0%B4%D0%B0.jpg",

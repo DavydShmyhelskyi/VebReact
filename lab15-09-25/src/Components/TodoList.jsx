@@ -1,28 +1,35 @@
 import React, {useState} from 'react';
 import AddTodoForm from './AddTodoForm';
-import TodoItem from './Task';
+import Task from './Task';
 
 export default function TodoList(){
-  const [Task, setTask] = useState([]); 
+  const [tasks, setTasks] = useState([]); 
 
-    const addTask = (text) => {
-        setTask(prev => [...prev, {id: Date.now(), text, completed: false}]);}
+  const addTask = (text) => {
+    setTasks(prev => [...prev, {id: Date.now(), text}]);
+  };
 
-    const deleteTask = (id) => {
-        setTask(prev => prev.filter(task => task.id !== id));}
-    
-    const editTask = (id, newText) => {
-        setTask(prev => prev.map(task => task.id === id ? {...task, text: newText} : task));}
-    
-    const toggleTaskCompletion = (id) => {
-        setTask(prev => prev.map(task => task.id === id ? {...task, completed: !task.completed} : task));}
-         
-        return (
+  const deleteTask = (id) => {
+    setTasks(prev => prev.filter(task => task.id !== id));
+  };
+
+  const editTask = (id, newText) => {
+    setTasks(prev => prev.map(task => 
+      task.id === id ? {...task, text: newText} : task
+    ));
+  };
+
+  return (
     <div>
       <AddTodoForm onAddTodo={addTask} />
       <ul>
-        {Task.map(t => (
-          <TodoItem key={t.id} task={t} onDelete={deleteTask} onEdit={editTask} onToggle={toggleTaskCompletion} />
+        {tasks.map(t => (
+          <Task 
+            key={t.id} 
+            task={t} 
+            onDelete={deleteTask} 
+            onEdit={editTask} 
+          />
         ))}
       </ul>
     </div>

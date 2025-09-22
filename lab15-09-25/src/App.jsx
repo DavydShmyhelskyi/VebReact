@@ -9,3 +9,12 @@ export default function App(){
     </div>
   );
 }
+
+ /*
+дерево компонентів
+
+App
+└── TodoList
+    ├── AddTodoForm
+    └── TodoItem
+*/

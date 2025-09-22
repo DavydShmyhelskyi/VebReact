@@ -18,11 +18,3 @@ export default function AddTodoForm({onAddTodo}){
     </form>
   );
 }
- /*
-дерево компонентів
-
-App
-└── TodoList
-    ├── AddTodoForm
-    └── TodoItem
-*/

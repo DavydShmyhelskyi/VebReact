@@ -86,4 +86,7 @@
    ```bash
    git clone https://github.com/DavydShmyhelskyi/VebReact.git
    cd VebReact/lab15-09-25
+2. Або відкрити сайт
+   ```bash
+   https://veb-react-1y45.vercel.app/
     

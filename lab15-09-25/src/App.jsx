@@ -13,8 +13,17 @@ export default function App(){
  /*
 дерево компонентів
 
-App
-└── TodoList
+App 
+│
+└── TodoList (State: tasks[])
+    │ Props: none
+    │
     ├── AddTodoForm
-    └── TodoItem
+    │     Props: onAddTodo (callback ↑)
+    │     State: value
+    │
+    └── Task (кілька екземплярів)
+          Props: task, onDelete, onEdit
+          State: completed
+
 */
